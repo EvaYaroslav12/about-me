@@ -100,8 +100,8 @@ body {
     display: block;
     /* Prevents unwanted bottom margin gaps */
     position: absolute;
-    top: 450px;
-    left: 705px;
+    bottom: 0px;
+    right: 20%;
 }
 
 .leifimg {
