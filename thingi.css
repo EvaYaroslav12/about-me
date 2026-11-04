@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+html,
+body,
+* {
+    font-size: 100px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1D654E;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.tbly {
+    background-color: #1D654E;
+}
+
+.main {
+    background-color: #1D654E;
+    background-image: url("img/patterny.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.designy {
+    background-color: #FFFDE4;
+    background-image: url("img/loading.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.buttony {
+    background-color: #1D654E;
+    width: 200px;
+}
+
+
+/* Container to hold and align buttons vertically on the screen edge */
+.side-buttons-container {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Base button styling */
+.side-btn {
+    display: inline-block;
+    background-image: url("sward.webp");
+    background-size: initial;
+    background-position: center;
+    width: 500px;
+    height: 150px;
+    padding: 12px 16px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #aba3a3;
+    text-decoration: none;
+    text-align: center;
+    /* Aligns text toward the visible edge */
+    padding-left: 160px;
+
+    /* Round only the outer corners */
+    border-radius: 0 8px 8px 0;
+    border: 0px solid #aba3a3;
+
+    /* Initial hidden state: shift left so only a sliver is visible */
+    transform: translateX(-270px);
+
+    /* Smooth transition effect */
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hover & Focus states: slide the button completely into view */
+.side-btn:hover,
+.side-btn:focus {
+    transform: translateX(-150px);
+    outline: none;
+}
+
+.btn-buttony {
+    background-color: transparent;
+    background-image: url('img/sward.png');
+    
+}
+
+.dukimg {
+    max-width: 32%;
+    height: 32%;
+    display: block;
+    /* Prevents unwanted bottom margin gaps */
+    position: absolute;
+    top: 450px;
+    left: 705px;
+}
+
+.leifimg {
+    max-width: 32%;
+    height: 32%;
+    display: block;
+    
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.imgflex {
+    max-width: 180px;
+    height: 180px;
+}
+
+@font-face {
+    font-family: 'zelda';
+    src: url('The\ Wild\ Breath\ of\ Zelda.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    /* Improves loading performance */
+}
+
+@font-face {
+    font-family: 'classy';
+    src: url('American\ Typewriter\ Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    /* Improves loading performance */
+}
+
+.headery {
+    font-size: 80px;
+    font-family: 'zelda', ui-sans-serif, system-ui, sans-serif;
+}
+
+.paragraphy {
+    font-size: 20px;
+    font-family: 'classy', ui-monospace, system-ui, monospace;
+}
+.linky {
+    font-size: 15px;
+    font-family: arial, ui-monospace, system-ui, monospace;
+}
+
+.flex-container {
+    display: flex;
+    /* Activates flexbox layout */
+    flex-direction: row;
+    /* Aligns items side-by-side (default) */
+    justify-content: space-between;
+    /* Distributes extra space evenly between items */
+    align-items: center;
+    /* Centers items vertically */
+    flex-wrap: wrap;
+    /* Allows items to move to a new line on small screens */
+    gap: 20px;
+    /* Adds spacing between the items */
+
+    padding: 20px;
+    background-color: transparent;
+    max-height: 100px;
+}
+
+/* 2. The Child Items */
+.flex-item {
+    flex: 1;
+    /* Forces all cards to grow and shrink equally */
+    max-width: 200px;
+    /* Prevents cards from getting too squished */
+
+    padding: 10px;
+    background-color: #09c083;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
